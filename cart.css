@@ -1,0 +1,181 @@
+body{
+    background-color: rgb(224, 233, 224);
+}
+
+#cartWrapper{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+}
+
+#cartTable{
+    width: 80%;
+    height: auto;
+}
+
+#cartTable th{
+    background-color: teal;
+    height: 6vh;
+    font-size: 1.5rem;
+
+}
+
+.addedItem{
+    text-align: center;
+    margin-top: 5vh;
+
+}
+.addedItem article{
+    height: 30vh;
+    width: 100%; 
+    text-align: center;
+    margin-top: 5vh;
+    border-bottom: solid rgba(26, 25, 25, 0.11) 3px;
+}
+.addedItem article img{
+    height: 80%;
+    width: 55% ;
+}
+
+.productQuentity{
+    width: 2.7rem;
+    height: 1.4rem;
+    text-align: center;
+}
+
+.plusBtn , .minusBtn{
+
+    margin: 0.5rem;
+    width: 2rem;
+    height: 1.8rem;
+}
+
+.removeBtn{
+    width: 6rem;
+    height: 1.7rem;
+    background-color: rgb(197, 11, 11);
+    border-radius: 0.5rem;
+    border: solid 1px #000;
+    cursor: pointer;
+    transition: height 0.5s, width 0.5s  ;
+    margin-top: 2vh;
+}
+
+.removeBtn:active{
+    width: 5.5rem;
+    height: 1.5rem;
+}
+
+
+tfoot{
+    width: 100vw;
+    height: 6vh;
+    background-color: teal;
+    margin-top: 10vh;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+footer{
+    width: 100%;
+    height: 5vh;
+    background-color: #000;
+    text-align: center;
+    color: #fff;
+    margin-top: 15vh;
+}
+
+
+
+
+/************************************Responsive****************************/
+
+@media screen and (max-width: 780px) {
+
+    
+    #cartTable th{
+        font-size: 1.2rem;
+        height: 5vh;
+    }
+    
+    .addedItem article img{
+        height: 80%;
+        width: 80% ;
+    }
+
+    .productQuentity{
+        width: 2.8rem;
+        height: 1.4rem;
+        text-align: center;
+    }
+    
+    .plusBtn , .minusBtn{
+    
+        margin: 0.5rem;
+        width: 2.8rem;
+        height: 1.8rem;
+    }
+        
+    .removeBtn{
+        width: 6rem;
+        height: 1.5rem;
+    }
+    
+    
+    tfoot{
+        font-size: 1.2rem;
+    }
+    
+}
+@media screen and (max-width: 375px) {
+
+    #cartTable{
+        width: 90%;
+    }
+    
+    #cartTable th{
+        height: 5vh;
+        font-size: 1rem;
+    
+    }
+    
+
+    .addedItem article{
+        height: 30vh;
+        width: 100%; 
+        text-align: center;
+        margin-top: 5vh;
+        border-bottom: solid rgba(26, 25, 25, 0.11) 3px;
+    }
+    .addedItem article img{
+        height: 80%;
+        width: 100% ;
+    }
+    
+    .productQuentity{
+        width: 2.8rem;
+        height: 1.4rem;
+        text-align: center;
+    }
+    
+    .plusBtn , .minusBtn{
+    
+        margin: 0.5rem;
+        width: 2.8rem;
+        height: 1.8rem;
+    }
+    
+    .removeBtn{
+        width: 6rem;
+        height: 1.5rem;
+    }
+    
+    
+    tfoot{
+        font-size: 1rem;
+    }
+    
+
+}
