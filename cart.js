@@ -100,6 +100,25 @@ for (let i = 0; i < removeBtn.length; i++) {
 }
 
 
+/*****************************************************************/
+
+const container = document.getElementById("container");
+const menuBtn = document.querySelector('.menuBtn');
+let menuOpen = false;
+menuBtn.addEventListener('click', () => {
+  if(!menuOpen) {
+    menuBtn.classList.add('open');
+    container.style.display = "block";
+    menuOpen = true;
+  } else {
+    menuBtn.classList.remove('open');
+    container.style.display = "none";
+    menuOpen = false;
+  }
+});
+
+
+
 
 
 

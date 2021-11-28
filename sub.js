@@ -70,13 +70,20 @@ function slideProducts(Element,arrowOne,arrowTwo){
     
      arrowOne.addEventListener("click",() => {
      
+         if (currentState == 0) {
+             return
+         }
          currentState += 100;
          Element.style.marginLeft = currentState + "px";
          console.log(currentState);
+
          
      })
      
      arrowTwo.addEventListener("click",() => {
+         if (currentState <= -3000) {
+             return
+         }
          
          currentState -= 100;
          Element.style.marginLeft = currentState + "px";
@@ -112,6 +119,44 @@ for (let i = 0; i < addToCart.length; i++) {
         
     })
 }
+
+/**********************************************************************/
+
+
+function filterByPrice(searchElement,categoryName,ElementContainer){
+    searchElement.addEventListener("click",() => {
+     switch (searchElement.value) {
+ 
+         case "fromLowPrice":
+             ElementContainer.innerHTML = " ";
+ 
+                 Products.sort((a , b) => { return a.price - b.price})
+                 for (let i = 0; i < Products.length; i++) {
+                     categoryies(Products[i],categoryName,ElementContainer);   
+                 }
+             break;
+     
+         case "fromHighPrice":
+             ElementContainer.innerHTML = " ";
+ 
+             Products.sort((a , b) => { return b.price - a.price})
+             for (let i = 0; i < Products.length; i++) {
+                 categoryies(Products[i],categoryName,ElementContainer);   
+             }
+             break;
+     
+         default:
+             break;
+     }
+  })
+}
+
+
+/**********************************************************************/
+
+
+
+
 
 
 
