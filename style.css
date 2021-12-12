@@ -88,7 +88,9 @@ header{
     height: 10px;
     border-radius: 10%;
 }
-
+.menuBtn{
+    display: none;
+}
 #changingImages{
     width: 100%;
     height: 80vh;
